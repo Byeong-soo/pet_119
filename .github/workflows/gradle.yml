@@ -41,7 +41,7 @@ jobs:
     
     # Docker image Build
     - name: docker image build
-      run: docker build -t pet_119_back .
+      run: docker build -t yubyeongsoo/pet_119_back .
       
     # DockeHub Login
     - name: docker login
@@ -52,7 +52,7 @@ jobs:
         
     # Docker Hub push
     - name: docker Hub push
-      run: docker push pet_119_back
+      run: docker push yubyeongsoo/pet_119_back
       
     # GET GitHub IP
     - name: get GitHub IP
