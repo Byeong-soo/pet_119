@@ -81,11 +81,12 @@ jobs:
         password: ${{ secrets.EC2_PASSWORD }} 
         port: ${{ secrets.EC2_SSH_PORT }}
         timeout: 60s
+#         sudo docker rm $(sudo docker stop $(sudo docker ps -a -q --filter ancestor=yubyeongsoo/pet_119_back))
+#           sudo docker pull yubyeongsoo/pet_119_back
         script: |
           sudo docker stop pet_119_back
           sudo docker rm pet_119_back
-          sudo docker pull yubyeongsoo/pet_119_back
-          sudo docker run -it -d -p 8080:8080 --name pet_119_back yubyeongsoo/pet_119_back
+          sudo docker run -d -p 8080:8080 --name pet_119_back yubyeongsoo/pet_119_back
           
     # REMOVE Github IP FROM security group (9)
     - name: Remove IP FROM security group
