@@ -85,7 +85,7 @@ jobs:
 #           sudo docker pull yubyeongsoo/pet_119_back
         script: |
           sudo docker rm $(sudo docker stop $(sudo docker ps -a -q --filter ancestor=yubyeongsoo/pet_119_back))
-          sudo docker run -d -p 8080:8080 yubyeongsoo/pet_119_back
+          sudo docker run -it -d -p 8080:8080 yubyeongsoo/pet_119_back
 #          sudo docker run -d -p 8080:8080 --name pet_119_back yubyeongsoo/pet_119_back
 #          sudo docker stop pet_119_back
 #          sudo docker rm pet_119_back
