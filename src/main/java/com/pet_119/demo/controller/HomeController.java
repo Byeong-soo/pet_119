@@ -16,4 +16,10 @@ public class HomeController {
         log.info("main page");
         return "index";
     }
+
+    @RequestMapping("/test")
+    public String test() {
+        log.info("test page");
+        return "test";
+    }
 }
