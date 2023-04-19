@@ -72,24 +72,24 @@ jobs:
       run : |
         aws ec2 authorize-security-group-ingress --group-id ${{ secrets.AWS_SG_ID }} --protocol tcp --port 22 --cidr ${{ steps.ip.outputs.ipv4 }}/32
         
-    # AWS EC2 Server Connect & Docker 명령어 실행
-    - name: AWS EC2 Connection
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.EC2_HOST }}
-        username: ${{ secrets.EC2_USERNAME }}
-        key: ${{ secrets.EC2_KEY }} 
-        port: ${{ secrets.EC2_SSH_PORT }}
-#        timeout: 60s
-#         sudo docker rm $(sudo docker stop $(sudo docker ps -a -q --filter ancestor=yubyeongsoo/pet_119_back))
-#           sudo docker pull yubyeongsoo/pet_119_back
-        script: |
-           echo "hello"
-#          sudo docker rm pet_119_back
-#          sudo docker stop pet_119_back
-#          sudo docker run -d -p 8080:8080 --name pet_119_back yubyeongsoo/pet_119_back
-#          sudo docker rm $(sudo docker stop $(sudo docker ps -a -q --filter ancestor=yubyeongsoo/pet_119_back))
-#          sudo docker run -it -d -p 8080:8080 yubyeongsoo/pet_119_back
+#     # AWS EC2 Server Connect & Docker 명령어 실행
+#     - name: AWS EC2 Connection
+#       uses: appleboy/ssh-action@master
+#       with:
+#         host: ${{ secrets.EC2_HOST }}
+#         username: ${{ secrets.EC2_USERNAME }}
+#         key: ${{ secrets.EC2_KEY }} 
+#         port: ${{ secrets.EC2_SSH_PORT }}
+# #        timeout: 60s
+# #         sudo docker rm $(sudo docker stop $(sudo docker ps -a -q --filter ancestor=yubyeongsoo/pet_119_back))
+# #           sudo docker pull yubyeongsoo/pet_119_back
+#         script: |
+#            echo "hello"
+# #          sudo docker rm pet_119_back
+# #          sudo docker stop pet_119_back
+# #          sudo docker run -d -p 8080:8080 --name pet_119_back yubyeongsoo/pet_119_back
+# #          sudo docker rm $(sudo docker stop $(sudo docker ps -a -q --filter ancestor=yubyeongsoo/pet_119_back))
+# #          sudo docker run -it -d -p 8080:8080 yubyeongsoo/pet_119_back
            
 
 
