@@ -80,7 +80,7 @@ jobs:
         username: ${{ secrets.EC2_USERNAME }}
         key: ${{ secrets.EC2_KEY }} 
         port: ${{ secrets.EC2_SSH_PORT }}
-# #        timeout: 60s
+# #        timeout: 60s 
 # #         sudo docker rm $(sudo docker stop $(sudo docker ps -a -q --filter ancestor=yubyeongsoo/pet_119_back))
 # #           sudo docker pull yubyeongsoo/pet_119_back
 #         script: |
