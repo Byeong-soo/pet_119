@@ -82,9 +82,9 @@ jobs:
         port: ${{ secrets.EC2_SSH_PORT }}
         timeout: 60s
         script: |
-          sudo docker stop boot-prac-ci
-          sudo docker rm boot-prac-ci
-          sudo docker run -it -d -p 8080:8080 --name boot-prac-ci lucaskang134/boot-prac-ci
+          sudo docker stop pet_119_back
+          sudo docker rm pet_119_back
+          sudo docker run -it -d -p 8080:8080 --name pet_119_back yubyeongsoo/pet_119_back
           
     # REMOVE Github IP FROM security group (9)
     - name: Remove IP FROM security group
