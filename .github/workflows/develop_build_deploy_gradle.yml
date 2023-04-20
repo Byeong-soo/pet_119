@@ -10,8 +10,6 @@ name: Java CI/CD with Gradle for develop
 on:
   push:
     branches: [ "develop" ]
-  pull_request:
-    branches: [ "develop" ]
 
 # permissions:
 #   contents: read
@@ -19,7 +17,6 @@ on:
 jobs:
   develop:
   
-
     runs-on: ubuntu-latest
 
     steps:
